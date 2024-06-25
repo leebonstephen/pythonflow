@@ -31,4 +31,12 @@ jobs:
           set -x 
           docker version
           docker build -t pydock .
+      - name: docker login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.USER_NAME }} 
+          password: ${{ secrets.USER_PASSWD }}
+      - name: docker push
+        run: |
+          docker push leebonstephen/pydock
 
