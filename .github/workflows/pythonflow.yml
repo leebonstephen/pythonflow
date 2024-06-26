@@ -8,7 +8,7 @@ on:
 
 jobs:
   pybldjob1:
-    runs-on: leelintst01
+    runs-on: self-hosted
     steps:
       - name: pybuildstep1
         uses: actions/checkout@v4
