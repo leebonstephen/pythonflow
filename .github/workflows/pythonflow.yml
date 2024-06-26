@@ -30,7 +30,7 @@ jobs:
         run: |
           set -x 
           docker version
-          docker build -t leebonstephen/pydock2 .
+          sudo docker build -t leebonstephen/pydock2 .
       - name: docker login
         uses: docker/login-action@v3
         with:
