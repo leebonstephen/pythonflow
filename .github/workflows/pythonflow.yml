@@ -10,6 +10,8 @@ jobs:
   pybldjob1:
     runs-on: leelintst01
     steps:
+      - name: run as root
+      - run: sudo su -
       - name: pybuildstep1
         uses: actions/checkout@v4
       - name: pybuildstep2
@@ -29,8 +31,8 @@ jobs:
       - name: creating docker image
         run: |
           set -x 
-          docker version
-          docker build -t leebonstephen/pydock2 .
+          sudo docker version
+          sudo docker build -t leebonstephen/pydock2 .
       - name: docker login
         uses: docker/login-action@v3
         with:
@@ -38,4 +40,4 @@ jobs:
           password: ${{ secrets.USER_PASSWD }}
       - name: docker push
         run: |
-          docker push leebonstephen/pydock2
+          sudo docker push leebonstephen/pydock2
