@@ -39,4 +39,3 @@ jobs:
       - name: docker push
         run: |
           docker push leebonstephen/pydock2
-
