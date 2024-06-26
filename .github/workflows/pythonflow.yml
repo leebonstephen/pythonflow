@@ -8,7 +8,7 @@ on:
 
 jobs:
   pybldjob1:
-    runs-on: ubuntu-latest
+    runs-on: leelintst01
     steps:
       - name: pybuildstep1
         uses: actions/checkout@v4
