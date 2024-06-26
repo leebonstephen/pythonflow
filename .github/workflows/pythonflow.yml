@@ -10,8 +10,6 @@ jobs:
   pybldjob1:
     runs-on: leelintst01
     steps:
-      - name: run as root
-      - run: sudo su -
       - name: pybuildstep1
         uses: actions/checkout@v4
       - name: pybuildstep2
